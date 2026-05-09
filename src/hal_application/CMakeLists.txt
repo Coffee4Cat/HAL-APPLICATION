@@ -21,9 +21,6 @@ find_package(example_interfaces REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(tf2 REQUIRED)
-find_package(tf2_ros REQUIRED)
-find_package(nav2_msgs REQUIRED)
 find_package(action_msgs REQUIRED)
 find_package(Qt5 REQUIRED COMPONENTS Widgets Gui Core)
 
@@ -51,10 +48,7 @@ ament_target_dependencies(${APP_NAME}
   geometry_msgs
   sensor_msgs
   example_interfaces
-  tf2
-  tf2_ros
   hal_interfaces
-  nav2_msgs
   action_msgs
   ament_index_cpp
 )
