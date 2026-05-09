@@ -1,0 +1,14 @@
+# communication mode (TCP/IP or BLUETOOTH)
+uint8 TCPIP = 0
+uint8 BLUETOOTH = 1
+
+uint8 comm_mode
+
+# ID of CAN frame
+uint8 id
+
+# data to be send in frame (in decimal format)
+uint8[] data
+---
+bool success
+string message

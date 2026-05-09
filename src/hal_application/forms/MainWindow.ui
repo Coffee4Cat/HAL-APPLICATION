@@ -1,0 +1,5973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1700</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1700</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>FreeSans</family>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::WheelFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 0); </string>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1700</width>
+      <height>1000</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1700</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1700</width>
+      <height>1000</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="main_page">
+     <property name="styleSheet">
+      <string notr="true">#main_page{
+background-color: rgba(20, 20, 20, 255);
+}</string>
+     </property>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>60</y>
+        <width>725</width>
+        <height>142</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 251, 227);
+font: 75 60pt &quot;Monospace&quot;;</string>
+         </property>
+         <property name="text">
+          <string>HAL APPLICATION</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(247, 172, 172);
+font: 75 10pt &quot;Monospace&quot;;</string>
+         </property>
+         <property name="text">
+          <string>VERSION 1.0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(247, 172, 172);
+font: 75 10pt &quot;Monospace&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ROS2-Qt-based Application for Manual and Autonomous control</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>230</y>
+        <width>611</width>
+        <height>741</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="manual_control_label">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>0</y>
+         <width>401</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 251, 227);
+font: 75 35pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>MANUAL CONTROL</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="chassis_and_manipulator_button">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>591</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 30pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+       </property>
+       <property name="text">
+        <string>Teleoperator</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>591</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="gamepad_manipulator_button">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>110</y>
+          <width>381</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(114, 255, 197, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 2px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 2px solid #fc9997;
+}</string>
+        </property>
+        <property name="text">
+         <string>MANIPULATOR</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="gamepad_chassis_button">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>40</y>
+          <width>381</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(114, 255, 197, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 2px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 2px solid #fc9997;
+}</string>
+        </property>
+        <property name="text">
+         <string>CHASSIS</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QWidget" name="gamepad_manipulator_diode" native="true"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QWidget" name="gamepad_chassis_diode" native="true"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="gamepad_none_button">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>40</y>
+          <width>131</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(247, 172, 172, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+        </property>
+        <property name="text">
+         <string>NONE</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="manual_control_label_4">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>0</y>
+          <width>371</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>GAMEPAD ACTIVATION</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>360</y>
+         <width>591</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="manual_control_label_5">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>20</y>
+          <width>491</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>GENERAL CONTROL SETTINGS</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>281</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="chassis_arm_button">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>261</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(247, 172, 172, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}</string>
+         </property>
+         <property name="text">
+          <string>Disarmed</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="enable_cmd_vel_1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>261</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(247, 172, 172, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}</string>
+         </property>
+         <property name="text">
+          <string>Deactivated</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manual_control_label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 20pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>CHASSIS</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_6">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>10</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QWidget" name="chassis_gcs_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_7">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>80</y>
+          <width>281</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="manipulator_arm_button">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>261</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(247, 172, 172, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}</string>
+         </property>
+         <property name="text">
+          <string>Disarmed</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="enable_joint_states_1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>261</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(247, 172, 172, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(30,30,30,255);
+    border: 2px solid #fc9997;
+}</string>
+         </property>
+         <property name="text">
+          <string>Deactivated</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manual_control_label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 20pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>MANIPULATOR</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_7">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>10</y>
+           <width>51</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QWidget" name="manipulator_gcs_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>230</y>
+        <width>421</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+     background-color: rgb(43, 56, 56);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>61</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QWidget" name="teleoperation_mode_diode" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_9">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>61</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QWidget" name="autonomous_mode_diode" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="block_all_button">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>401</width>
+         <height>53</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 20pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: #ee3a3a;
+    color: #ffffff;
+    border: 0px solid #2F299E;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+       </property>
+       <property name="text">
+        <string>Block All</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="teleoperation_mode_button">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>90</y>
+         <width>319</width>
+         <height>47</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+       </property>
+       <property name="text">
+        <string>Teleoperation</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="autonomous_mode_button">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>160</y>
+         <width>319</width>
+         <height>47</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+       </property>
+       <property name="text">
+        <string>Autonomy</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>10</y>
+         <width>161</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="manual_control_label_3">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 251, 227);
+font: 75 25pt &quot;Monospace&quot;;
+text-align: center;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>PRIORITY</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="manual_control_label_8">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 251, 227);
+font: 75 10pt &quot;Monospace&quot;;
+text-align: center;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>(/cmd_vel)(MUX)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pose_navigator_page">
+     <property name="styleSheet">
+      <string notr="true">#pose_navigator_page{
+background-color: rgba(20,20,20,255);
+}</string>
+     </property>
+     <widget class="QPushButton" name="goback">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 10pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: #ee3a3a;
+    color: #ffffff;
+    border: 0px solid #2F299E;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+      </property>
+      <property name="text">
+       <string>Main Page</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_12">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>1231</width>
+        <height>911</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="map_view_placeholder" native="true">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>1181</width>
+         <height>871</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_13">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>710</y>
+        <width>391</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="block_all_button_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>371</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 20pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: #ee3a3a;
+    color: #ffffff;
+    border: 0px solid #2F299E;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+       </property>
+       <property name="text">
+        <string>Block All</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_32">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>371</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="manual_control_label_16">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>211</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>Autonomy</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_22">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>61</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_22">
+         <item>
+          <widget class="QWidget" name="autonomy_diode_2" native="true"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_33">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>210</y>
+         <width>371</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="manual_control_label_17">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>0</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>X: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="manual_control_label_18">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>0</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>Z: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="chassis_x_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>0</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>0.0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="chassis_z_2">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>0</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_34">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>481</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="manual_control_label_19">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>ERC:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="erc_rover_pos">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>10</y>
+         <width>381</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>(0,0,0)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_35">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>10</y>
+        <width>601</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="manual_control_label_20">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>ROS:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ros_rover_pos">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>10</y>
+         <width>561</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>(0,0,0)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_36">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>10</y>
+        <width>391</width>
+        <height>691</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTabWidget" name="tabWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>371</width>
+         <height>671</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabBar::tab {
+    background:rgb(150, 220, 190);
+    color: white;                
+    padding: 6px;
+    border: 1px solid #888;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+QTabBar::tab:selected {
+    background: rgba(114, 197, 255, 255);
+    color: white;
+    font-weight: bold;
+}
+</string>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="current">
+        <attribute name="title">
+         <string>current</string>
+        </attribute>
+        <widget class="QFrame" name="frame_37">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>351</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="useless_title_1">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Current Action</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_41">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>60</y>
+            <width>321</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="current_action_label_1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>251</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>None</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_38">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>140</y>
+           <width>351</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="current_action_2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>281</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Action Status</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_39">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>80</y>
+            <width>301</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="action_status">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>261</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>0 PROC</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_40">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>330</y>
+           <width>351</width>
+           <height>301</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="current_action_3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>281</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Action Control</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="start_action">
+          <property name="geometry">
+           <rect>
+            <x>108</x>
+            <y>70</y>
+            <width>231</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>START</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="abort_action">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>180</y>
+            <width>321</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: rgba(247, 172, 172, 255);
+	color: rgba(255, 251, 227, 255);
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: #ee3a3a;
+    color: #ffffff;
+    border: 0px solid #2F299E;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>ABORT</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_29">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>70</y>
+            <width>71</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_29">
+           <item>
+            <widget class="QWidget" name="action_goal_diode" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="picker">
+        <attribute name="title">
+         <string>picker</string>
+        </attribute>
+        <widget class="QFrame" name="frame_42">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>351</width>
+           <height>491</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="useless_title_2">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>291</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Pick Action</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="point1">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>331</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>point1</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="point2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>90</y>
+            <width>331</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>point2</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="point3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>130</y>
+            <width>331</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>point3</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="point4">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>170</y>
+            <width>331</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>point4</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="base">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>210</y>
+            <width>331</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>base</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="set_dynamic_goal">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>440</y>
+            <width>331</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>set dynamic goal</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_52">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>280</y>
+            <width>331</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="manual_control_label_24">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>61</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>X:</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_59">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>10</y>
+             <width>251</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLineEdit" name="dynamic_x">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>5</y>
+              <width>241</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(150, 220, 190);</string>
+            </property>
+            <property name="text">
+             <string>0.0</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_60">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>330</y>
+            <width>331</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="manual_control_label_26">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>61</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Y:</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_61">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>10</y>
+             <width>251</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLineEdit" name="dynamic_y">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>5</y>
+              <width>241</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(150, 220, 190);</string>
+            </property>
+            <property name="text">
+             <string>0.0</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_62">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>380</y>
+            <width>331</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="manual_control_label_28">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>61</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Z:</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_64">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>10</y>
+             <width>251</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLineEdit" name="dynamic_z">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>5</y>
+              <width>241</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(150, 220, 190);</string>
+            </property>
+            <property name="text">
+             <string>0.0</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="manual_control_label_29">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>260</y>
+            <width>211</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>(erc conv)</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_44">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>510</y>
+           <width>351</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="useless_title_3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Current Action</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_45">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>60</y>
+            <width>321</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="current_action_label_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>251</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>None</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="poser">
+        <attribute name="title">
+         <string>pose</string>
+        </attribute>
+        <widget class="QLabel" name="useless_title_4">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>0</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(247, 172, 172);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>EMERGENCY</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_43">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="manual_control_label_21">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>X:</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_46">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>251</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="emergency_x_t">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>241</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);</string>
+           </property>
+           <property name="text">
+            <string>0.0</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="set_emergency">
+         <property name="geometry">
+          <rect>
+           <x>28</x>
+           <y>360</y>
+           <width>321</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgba(255, 251, 227, 255);
+    background: rgba(247, 172, 172, 255);
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+         </property>
+         <property name="text">
+          <string>SET</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_54">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>430</y>
+           <width>351</width>
+           <height>201</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="useless_title_5">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>10</y>
+            <width>191</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(247, 172, 172);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>NOTE:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="useless_title_6">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>341</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(247, 172, 172);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>XYZ in ros format</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="useless_title_7">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>341</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(247, 172, 172);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>A is angle</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_65">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="manual_control_label_31">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Y:</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_67">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>251</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="emergency_y_t">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>241</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);</string>
+           </property>
+           <property name="text">
+            <string>0.0</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_68">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="manual_control_label_32">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Z:</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_69">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>251</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="emergency_z_t">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>241</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);</string>
+           </property>
+           <property name="text">
+            <string>0.0</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_70">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="manual_control_label_34">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>W:</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_72">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>251</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="emergency_w_r">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>241</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);</string>
+           </property>
+           <property name="text">
+            <string>1.0</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_73">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>200</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="manual_control_label_35">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>XR:</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_74">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>251</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="emergency_x_r">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>241</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);</string>
+           </property>
+           <property name="text">
+            <string>0.0</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_75">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>240</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="manual_control_label_37">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>YR:</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_77">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>251</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="emergency_y_r">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>241</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);</string>
+           </property>
+           <property name="text">
+            <string>0.0</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_78">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>280</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="manual_control_label_38">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>ZR:</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_79">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>251</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="emergency_z_r">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>241</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(150, 220, 190);</string>
+           </property>
+           <property name="text">
+            <string>0.0</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="data">
+        <attribute name="title">
+         <string>data</string>
+        </attribute>
+        <widget class="QLabel" name="useless_title_8">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>181</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>SYS DATA</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_55">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>351</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="current_action_4">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>20</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>ZED2</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_24">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>71</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_24">
+           <item>
+            <widget class="QWidget" name="zed2_status_diode" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_56">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>180</y>
+           <width>351</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="current_action_5">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>20</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>SLAM</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_25">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>71</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_25">
+           <item>
+            <widget class="QWidget" name="slam_status_diode" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_57">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>290</y>
+           <width>351</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="current_action_7">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>20</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>NVBLOX</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_27">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>71</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_27">
+           <item>
+            <widget class="QWidget" name="nvblox_status_diode" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_58">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>400</y>
+           <width>351</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="current_action_8">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>20</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>NAV2</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_28">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>71</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_28">
+           <item>
+            <widget class="QWidget" name="nav2_status_diode" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="clear_path">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>550</y>
+           <width>321</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: rgba(247, 172, 172, 255);
+	color: rgba(255, 251, 227, 255);
+    border: 0px solid rgba(114, 255, 197, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: #ee3a3a;
+    color: #ffffff;
+    border: 0px solid #2F299E;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+         </property>
+         <property name="text">
+          <string>CLEAR PATH</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_23">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>0</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_23">
+        <item>
+         <widget class="QWidget" name="alive_diode_2" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="manual_control_label_27">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>-20</y>
+         <width>121</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>ALIVE</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="chassis_and_laboratory_page">
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgba(20, 20, 20, 255);</string>
+     </property>
+     <widget class="QPushButton" name="goback_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgba(255, 251, 227, 255);
+    color: black;
+    background-color: rgba(247, 172, 172, 255);
+	color: rgba(255, 251, 227, 255);
+    border: 0px solid #2F299E;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 10pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 251, 227, 255);
+    color: black;
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 251, 227, 255);
+    color: black;
+    border: 4px solid #fc9997;
+}</string>
+      </property>
+      <property name="text">
+       <string>Main Page</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>330</y>
+        <width>401</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Oby nie...</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="chassis_and_manipulator_page">
+     <property name="styleSheet">
+      <string notr="true">#chassis_and_manipulator_page {
+background-color: rgba(20, 20, 20, 255);
+}</string>
+     </property>
+     <widget class="QPushButton" name="goback_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 2px solid #fc9997;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 10pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: #ee3a3a;
+    color: #ffffff;
+    border: 0px solid #2F299E;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+      </property>
+      <property name="text">
+       <string>Main Page</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>731</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+     background-color: rgb(43, 56, 56);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="frame_9">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>10</y>
+         <width>451</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>431</width>
+          <height>411</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QWidget" name="JoystickPlaceholder" native="true"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="manual_control_label_9">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>10</y>
+          <width>271</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>CHASSIS DRIVE</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>231</width>
+         <height>321</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="lamp_green_button">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>140</y>
+          <width>191</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(114, 255, 197, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+        </property>
+        <property name="text">
+         <string>GREEN</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="lamp_blue_button">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>220</y>
+          <width>191</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(114, 197, 255, 255);
+    border: 0px solid rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 197, 255, 255); 
+    color: rgba(30,30,30,255);
+    border: 4px solid #4a90e2;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 216, 255, 255);
+    color: rgba(30,30,30,255);
+    border: 4px solid #9997fc;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>BLUE</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="manual_control_label_10">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>81</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>LAMP</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="lamp_red_button">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>191</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(247, 172, 172, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(30,30,30,255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(30,30,30,255);
+    border: 4px solid #fc9997;
+}</string>
+        </property>
+        <property name="text">
+         <string>RED</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>340</y>
+         <width>231</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="block_all_button_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>191</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 20pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: #ee3a3a;
+    color: #ffffff;
+    border: 0px solid #2F299E;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(255, 251, 227, 255);
+    border: 4px solid #fc9997;
+}</string>
+        </property>
+        <property name="text">
+         <string>Block All</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_14">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>580</y>
+        <width>731</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+     background-color: rgb(43, 56, 56);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="manual_control_label_11">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 251, 227);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>TELEMETRY</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_20">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>60</y>
+         <width>231</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="manual_control_label_13">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>CHASSIS</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_23">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>220</y>
+          <width>191</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>Z:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="chassis_z">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_24">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>191</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>X: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="chassis_x">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_22">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>60</y>
+         <width>391</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="manual_control_label_14">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>10</y>
+          <width>231</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>MANIPULATOR</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_25">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>181</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>X: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manipulator_x_t">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_26">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>220</y>
+          <width>181</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_22">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>Z: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manipulator_z_t">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_27">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>181</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_21">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>Y: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manipulator_y_t">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_28">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>260</y>
+          <width>161</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>Z: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manipulator_z_o">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_29">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>190</y>
+          <width>161</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_25">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>Y: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manipulator_y_o">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_30">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>120</y>
+          <width>161</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_24">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>X: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manipulator_x_o">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_31">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>50</y>
+          <width>161</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(52, 66, 66),
+        stop:1 rgb(43, 56, 56)
+    );
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_23">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>41</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>W: </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manipulator_w_o">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>0</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(150, 220, 190);
+font: 75 15pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_15">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>10</y>
+        <width>931</width>
+        <height>971</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+     background-color: rgb(43, 56, 56);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>911</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabBar::tab {
+    background:rgb(150, 220, 190);
+    color: white;                
+    padding: 6px;
+    border: 1px solid #888;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+QTabBar::tab:selected {
+    background: rgba(114, 197, 255, 255);
+    color: white;
+    font-weight: bold;
+}
+</string>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="teleoperation">
+        <attribute name="title">
+         <string>teleoperation</string>
+        </attribute>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>470</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    font: 75 15pt &quot;Monospace&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Z</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_16">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>441</width>
+           <height>851</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>0</y>
+            <width>261</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>TRANSLATION</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>40</y>
+            <width>51</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>X/Y</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_11">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>480</y>
+            <width>111</width>
+            <height>331</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QWidget" name="JoystickPlaceholder_3" native="true"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_10">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>70</y>
+            <width>381</width>
+            <height>361</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <widget class="QWidget" name="JoystickPlaceholder_2" native="true"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_17">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>450</y>
+            <width>21</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Z</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_17">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>460</y>
+            <width>261</width>
+            <height>411</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+     background-color: rgb(43, 56, 56);
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_11">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>10</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>GRIPPER</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="gripper_open_button">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>40</y>
+             <width>191</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+       background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    color: rgba(30,30,30,255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+           </property>
+           <property name="text">
+            <string>OPEN</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="gripper_stop_button">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>170</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+       background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    color: rgba(30,30,30,255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(247, 172, 172, 0.35);
+	color: rgba(30,30,30,255);
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(247, 172, 172, 0.5);
+	color: rgba(30,30,30,255);
+    border: 4px solid #fc9997;
+}</string>
+           </property>
+           <property name="text">
+            <string>STOP</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="gripper_close_button">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>240</y>
+             <width>191</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+        background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    color: rgba(30,30,30,255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+           </property>
+           <property name="text">
+            <string>CLOSE</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_18">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>10</y>
+           <width>371</width>
+           <height>681</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>10</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>ORIENTATION</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>140</x>
+            <y>60</y>
+            <width>101</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>local X</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_14">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>331</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QWidget" name="JoystickPlaceholder_6" native="true"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>140</x>
+            <y>190</y>
+            <width>91</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>local Z</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_17">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>220</y>
+            <width>331</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_18">
+           <item>
+            <widget class="QWidget" name="JoystickPlaceholder_4" native="true"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_16">
+          <property name="geometry">
+           <rect>
+            <x>250</x>
+            <y>360</y>
+            <width>111</width>
+            <height>311</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_17">
+           <item>
+            <widget class="QWidget" name="JoystickPlaceholder_5" native="true"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>330</y>
+            <width>101</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>local Y</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_15">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>330</y>
+            <width>101</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>PRESET</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="front_preset_button">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>360</y>
+            <width>191</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(114, 255, 197, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>FRONT</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ground_preset_button">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>420</y>
+            <width>191</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: rgba(30,30,30,255);
+    color: rgba(114, 255, 197, 255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 25pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+          </property>
+          <property name="text">
+           <string>GROUND</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_19">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>500</y>
+            <width>231</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+     background-color: rgb(43, 56, 56);
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="home_button">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>211</width>
+             <height>151</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+       background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    color:rgba(30,30,30,255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 30pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+           </property>
+           <property name="text">
+            <string>HOME</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_12">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>60</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QWidget" name="d1_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_13">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>160</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <item>
+           <widget class="QWidget" name="d2_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_18">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>260</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_15">
+          <item>
+           <widget class="QWidget" name="d3_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_19">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>360</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_19">
+          <item>
+           <widget class="QWidget" name="d4_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_20">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>460</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_20">
+          <item>
+           <widget class="QWidget" name="d5_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_21">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>570</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_21">
+          <item>
+           <widget class="QWidget" name="d6_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>30</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>D1</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_19">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>130</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>D2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_20">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>230</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>D3</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_27">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>330</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>D4</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_28">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>430</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>D5</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_29">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>540</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    font: 75 15pt &quot;Monospace&quot;;
+color:rgb(150, 220, 190);
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>D6</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_21">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>700</y>
+           <width>371</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QWidget" name="verticalLayoutWidget_15">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>331</width>
+            <height>141</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_16">
+           <item>
+            <widget class="QWidget" name="axis_view" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="mode45_button">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>630</y>
+           <width>51</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+       background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(70, 138, 110),
+        stop:1 rgb(150, 220, 190)
+    );
+    color:rgba(30,30,30,255);
+    border: 0px solid  rgba(255, 251, 227, 255);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 20pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(114, 255, 197, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #54ba90;
+}
+
+QPushButton:pressed {
+    background-color: rgba(160, 255, 216, 255);
+	color: rgba(30,30,30, 255);
+    border: 4px solid #fc9997;
+}</string>
+         </property>
+         <property name="text">
+          <string>45</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_26">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>810</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_26">
+          <item>
+           <widget class="QWidget" name="mode45_diode" native="true"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="preset">
+        <attribute name="title">
+         <string>preset</string>
+        </attribute>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>70</y>
+           <width>361</width>
+           <height>781</height>
+          </rect>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="preset_widget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>359</width>
+            <height>779</height>
+           </rect>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_31">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>351</width>
+             <height>781</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="preset_layout"/>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QLabel" name="manual_control_label_22">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>20</y>
+           <width>141</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 251, 227);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>PRESET</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="manual_control_label_23">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>20</y>
+           <width>141</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 251, 227);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>MOTION</string>
+         </property>
+        </widget>
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>70</y>
+           <width>351</width>
+           <height>781</height>
+          </rect>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>349</width>
+            <height>779</height>
+           </rect>
+          </property>
+          <widget class="QWidget" name="motion_widget" native="true">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>341</width>
+             <height>781</height>
+            </rect>
+           </property>
+           <widget class="QWidget" name="verticalLayoutWidget_32">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>341</width>
+              <height>781</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="motion_layout"/>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="settings">
+        <attribute name="title">
+         <string>settings</string>
+        </attribute>
+        <widget class="QFrame" name="frame_47">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>841</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_30">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>261</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Motion Speed</string>
+          </property>
+         </widget>
+         <widget class="QSlider" name="motion_speed_slider">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>60</y>
+            <width>761</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSlider::groove:horizontal {
+    height: 6px;
+    background: rgb(200, 200, 200);
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+    background: rgb(150, 220, 190);
+    border: 2px solid rgb(120, 190, 160);
+    width: 16px;
+    margin: -6px 0; /* wyśrodkowanie uchwytu */
+    border-radius: 8px;
+}
+
+QSlider::sub-page:horizontal {
+    background: rgb(150, 220, 190);
+    border-radius: 3px;
+}
+
+QSlider::add-page:horizontal {
+    background: rgb(220, 220, 220);
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: rgb(130, 200, 170);
+}
+
+QSlider::handle:horizontal:pressed {
+    background: rgb(110, 180, 150);
+}</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>25</number>
+          </property>
+          <property name="value">
+           <number>10</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="min_motion_speed">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>80</y>
+            <width>81</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="max_motion_speed">
+          <property name="geometry">
+           <rect>
+            <x>740</x>
+            <y>80</y>
+            <width>81</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="current_motion_speed">
+          <property name="geometry">
+           <rect>
+            <x>600</x>
+            <y>10</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Current: 10</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="manual_control_label_12">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>10</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 251, 227);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>MANIPULATOR</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_63">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>0</y>
+        <width>231</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border-radius: 20px;
+    border: 0px solid rgba(114, 255, 197, 255);
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 rgb(42, 56, 56),
+        stop:1 rgb(23, 36, 36)
+    );
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="manual_control_label_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(150, 220, 190);
+font: 75 25pt &quot;Monospace&quot;;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>ALIVE</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_30">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>10</y>
+         <width>51</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_30">
+        <item>
+         <widget class="QWidget" name="alive_diode_1" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="sensor_monitor_page">
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgba(20, 20, 20, 255);</string>
+     </property>
+     <widget class="QPushButton" name="goback_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgba(255, 251, 227, 255);
+    color: black;
+    background-color: rgba(247, 172, 172, 255);
+	color: rgba(255, 251, 227, 255);
+    border: 0px solid #2F299E;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font: 75 10pt &quot;Monospace&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 251, 227, 255);
+    color: black;
+    border: 4px solid #fc9997;
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 251, 227, 255);
+    color: black;
+    border: 4px solid #fc9997;
+}</string>
+      </property>
+      <property name="text">
+       <string>Main Page</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

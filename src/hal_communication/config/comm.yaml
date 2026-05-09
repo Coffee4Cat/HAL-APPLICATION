@@ -1,0 +1,10 @@
+communication:
+  ros__parameters:
+    # rover_IP: '172.17.0.1'
+    # rover_port: 65432
+    # rover_IP: '192.168.1.98'
+    # rover_port: 8889
+    rover_IP: '192.168.2.69'
+    rover_port: 8888
+    # rover_IP: 'localhost'
+    # rover_port: 80
