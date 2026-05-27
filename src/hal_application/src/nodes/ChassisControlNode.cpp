@@ -44,10 +44,10 @@ void ChassisControlNode::run() {
 
 void ChassisControlNode::gamepadHandler(std::shared_ptr<hal_interfaces::msg::GamepadInterface> msg) {
     if (gamepad_active.load()) {
-        if (msg->axes[5] > -0.5) {
-            current_velocity.linear.x = (msg->axes[5] + 0.5) / 1.7; // [0 - 1];
-        } else if (msg->axes[2] > -0.5) {
-            current_velocity.linear.x = - (msg->axes[2] + 0.5) / 1.7;   // [-1 - 0];
+        if (msg->axes[5] > -0.9) {
+            current_velocity.linear.x = (msg->axes[5] + 0.9) / 2.05; // [0 - 1];
+        } else if (msg->axes[2] > -0.9) {
+            current_velocity.linear.x = - (msg->axes[2] + 0.9) / 2.05;   // [-1 - 0];
         }
         else {
             current_velocity.linear.x = 0.0;
@@ -59,6 +59,7 @@ void ChassisControlNode::gamepadHandler(std::shared_ptr<hal_interfaces::msg::Gam
         }
     }
 }
+
 
 
 
