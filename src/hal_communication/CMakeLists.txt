@@ -155,6 +155,7 @@ install(PROGRAMS
   scripts/wheel_interface.py
   scripts/manipulator_interface.py
   scripts/teleoperator.py
+  scripts/labo_app.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
