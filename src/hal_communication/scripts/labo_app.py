@@ -8,13 +8,15 @@ import socket
 
 class Teleoperator:
     def __init__(self):
-        # self.server_ip = '192.168.2.69'
-        self.server_ip = '192.168.1.1'
+        self.server_ip = '192.168.2.69'
+        # self.server_ip = '192.168.1.1'
         self.server_port = 8890
         self.sock = None
         self.last_response = None
         self.connect_socket()
         print('[TELEOPERATOR] LABO EDITION')
+
+        self.wrzeciono_speed = 255
 
         self.rev_x_inc = 0
         self.rev_y_inc = 0
@@ -139,12 +141,14 @@ class Teleoperator:
 
     def manual_control(self, num):
         print(f'MANUAL CONTROL {num}')
+        if self.wrzeciono_speed >= 255:
+            self.wrzeciono_speed = 255
         command_map = {
             0: [0, 0, 0, 3, 128, 0, 0, 0],
             1: [0, 0, 0, 4, 255, 0, 0, 0],
             2: [0, 0, 0, 0, 0, 0, 0, 0],
-            3: [0, 0, 0, 0, 0, 1, 128, 0],
-            4: [0, 0, 0, 0, 0, 2, 255, 0],
+            3: [0, 0, 0, 0, 0, 1, self.wrzeciono_speed, 0],
+            4: [0, 0, 0, 0, 0, 2, self.wrzeciono_speed, 0],
             5: [0, 0, 0, 1, 255, 0, 0, 0],
             6: [0, 0, 0, 2, 128, 0, 0, 0],
             7: [0, 0, 0, 0, 0, 0, 0, 0],
@@ -257,7 +261,7 @@ def initialize_gui(node: Teleoperator):
     root = tk.Tk()
     root.title("TELEOPERATOR")
     root.configure(bg="#7a9dde")
-    root.geometry("1300x800")
+    root.geometry("1500x700")
     root.resizable(False, False)
 
     frame = tk.Frame(root)
@@ -279,6 +283,7 @@ def initialize_gui(node: Teleoperator):
     rev_y_inc_var = tk.StringVar(value=str(node.rev_y_inc))
     rev_y_index_var = tk.StringVar(value=str(node.rev_y_index))
     rev_y_speed_var = tk.StringVar(value="0")
+    wrzeciono_speed_var = tk.StringVar(value=str(node.wrzeciono_speed))
 
     def bind_entry_to_attr(text_var, attr_name):
         def callback(*args):
@@ -291,6 +296,7 @@ def initialize_gui(node: Teleoperator):
     bind_entry_to_attr(rev_y_abs_var, 'rev_y_abs')
     bind_entry_to_attr(rev_y_inc_var, 'rev_y_inc')
     bind_entry_to_attr(rev_y_index_var, 'rev_y_index')
+    bind_entry_to_attr(wrzeciono_speed_var, 'wrzeciono_speed')
 
     # Group for manual controls (drawn as a rectangle/labelled frame)
     manual_group = tk.LabelFrame(frame, text="C5 STUFF", bg="#494b4f", fg="#ffffff", bd=2, relief=tk.GROOVE, font=("Arial", 12))
@@ -317,6 +323,7 @@ def initialize_gui(node: Teleoperator):
     wyciskacz_4_button = tk.Button(manual_group, bg="#da3afa", fg="#ffffff", text="WYCISKACZ FULL", width=13, height=2)
     wyciskacz_4_button.bind('<ButtonPress-1>', lambda e: node.wyciskacz(4))
     wyciskacz_4_button.grid(row=4, column=2, padx=5, pady=5)
+
 
     sonda_1_button = tk.Button(manual_group, bg="#e49b14", fg="#ffffff", text="SONDA GLEBA UP", width=15, height=2)
     sonda_1_button.bind('<ButtonPress-1>', lambda e: node.sonda(1))
@@ -357,6 +364,9 @@ def initialize_gui(node: Teleoperator):
 
     man_group = tk.LabelFrame(frame, text="MANUAL STUFF", bg="#494b4f", fg="#ffffff", bd=2, relief=tk.GROOVE, font=("Arial", 12))
     man_group.grid(row=1, column=8, rowspan=10, columnspan=1, padx=12, pady=10, sticky="nsew")
+    
+    tk.Label(man_group, text="WRZECIONO SPEED", bg="#494b4f", fg="#ffffff", font=("Arial", 10, "bold")).grid(row=9, column=1, padx=5, pady=5, sticky="e")
+    tk.Entry(man_group, textvariable=wrzeciono_speed_var, width=8).grid(row=10, column=1, padx=5, pady=5)
     manual_label_list = ["OPUSZCZANIE 50%", "PODNOSZENIE 100%", "ZATRZYMAJ PION WIERTŁO", "RUCH WRZECIONA", "KRĘĆ DO TYŁU 100%", "MIESZADŁO K1 100%", "MIESZADŁO K2 50%", "STOP MIESZADŁO"]
     for i in range(8):
         manual_control_button = tk.Button(man_group, bg="#e41475", fg="#140808", text=f"{manual_label_list[i]}", width=20, height=2)
