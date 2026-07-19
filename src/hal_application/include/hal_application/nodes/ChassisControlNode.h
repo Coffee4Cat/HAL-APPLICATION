@@ -5,7 +5,7 @@
 #include <example_interfaces/msg/bool.hpp>
 #include <example_interfaces/msg/string.hpp>
 
-
+#include <rclcpp/parameter_client.hpp>
 
 class ChassisControlNode : public ApplicationNode {
     Q_OBJECT
@@ -29,6 +29,8 @@ private:
     rclcpp::TimerBase::SharedPtr alive_timer;
     bool comm_alive;
 
+    std::shared_ptr<rclcpp::AsyncParametersClient> comm_param_client_;
+
 public:
     ChassisControlNode(QObject *parent = nullptr);
     ~ChassisControlNode() override;
@@ -44,6 +46,8 @@ public slots:
     // comm slots
     void armChassis();
     void lightChange(QString qstr);
+
+    void updateConnectionParams(QString ip, int port);
 
 signals:
     void gamepadStatus(bool current_status);

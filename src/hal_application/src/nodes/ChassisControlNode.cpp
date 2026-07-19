@@ -13,6 +13,7 @@ ChassisControlNode::~ChassisControlNode() {
 
 void ChassisControlNode::run() {
     node = std::make_shared<rclcpp::Node>("ChassisControlNode");
+    comm_param_client_ = std::make_shared<rclcpp::AsyncParametersClient>(node, "communication");
     velocity_publisher = node->create_publisher<geometry_msgs::msg::Twist>("/app/cmd_vel", 10);
     gamepad_subscriber = node->create_subscription<hal_interfaces::msg::GamepadInterface>("/gamepad_data",10,std::bind(&ChassisControlNode::gamepadHandler, this, std::placeholders::_1));
     alive_subscriber = node->create_subscription<example_interfaces::msg::Bool>("/comm_status",10,[this] (std::shared_ptr<example_interfaces::msg::Bool> msg) {comm_alive = true;});
@@ -97,5 +98,17 @@ void ChassisControlNode::lightChange(QString qstr) {
         msg.data = "blue";
     }
     light_publisher->publish(msg);
+}
+
+void ChassisControlNode::updateConnectionParams(QString ip, int port) {
+    if (comm_param_client_ && comm_param_client_->service_is_ready()) {
+        comm_param_client_->set_parameters({
+            rclcpp::Parameter("rover_IP", ip.toStdString()),
+            rclcpp::Parameter("rover_port", port)
+        });
+        RCLCPP_INFO(node->get_logger(), "Sent new connection params: %s:%d", ip.toStdString().c_str(), port);
+    } else {
+        RCLCPP_WARN(node->get_logger(), "Communication parameter server not ready");
+    }
 }
 

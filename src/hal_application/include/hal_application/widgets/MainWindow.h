@@ -42,6 +42,8 @@ private slots:
     void onGamepadManipulatorClicked();
     void onGamepadNoneClicked();
 
+    void onConnectClicked();
+
 
 
 private:

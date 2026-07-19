@@ -147,7 +147,45 @@ CommunicationServer::CommunicationServer(): Node("communication_server") {
   server_ = create_service<hal_interfaces::srv::Communication>(
       comm::CONST::SRV_NAME,
       std::bind(&CommunicationServer::sendData, this, std::placeholders::_1, std::placeholders::_2));
+  param_cb_handle_ = this->add_on_set_parameters_callback(
+      std::bind(&CommunicationServer::on_param_change, this, std::placeholders::_1));    
   RCLCPP_INFO(this->get_logger(), "Initialize communication server");
+}
+
+rcl_interfaces::msg::SetParametersResult CommunicationServer::on_param_change(const std::vector<rclcpp::Parameter> &params) {
+  rcl_interfaces::msg::SetParametersResult result;
+  result.successful = true;
+  bool changed = false;
+  TCPParams new_params;
+  
+  // Read current params
+  new_params.IP = this->get_parameter(comm::CONST::PARAM_IP).as_string();
+  new_params.port = this->get_parameter(comm::CONST::PARAM_PORT).as_int();
+
+  for (const auto &param : params) {
+    if (param.get_name() == comm::CONST::PARAM_IP) {
+      new_params.IP = param.as_string();
+      changed = true;
+    } else if (param.get_name() == comm::CONST::PARAM_PORT) {
+      new_params.port = param.as_int();
+      changed = true;
+    }
+  }
+
+  if (changed) {
+    RCLCPP_INFO(this->get_logger(), "Connection params changed. New IP: %s, Port: %d", new_params.IP.c_str(), new_params.port);
+    tcpHandler_.setParams(new_params);
+    auto res = tcpHandler_.restartConnection();
+    
+    if (res.has_value()) {
+      RCLCPP_WARN(this->get_logger(), "Failed to reconnect: %s", res.value().c_str());
+      result.successful = false;
+      result.reason = res.value();
+    } else {
+      RCLCPP_INFO(this->get_logger(), "Reconnected successfully to %s:%d", new_params.IP.c_str(), new_params.port);
+    }
+  }
+  return result;
 }
 
 CommunicationServer::~CommunicationServer() {

@@ -86,6 +86,9 @@ MainWindow::MainWindow(ChassisControlNode* chassis_node, ManipulatorControlNode*
     connect(ui->gamepad_chassis_button, &QPushButton::clicked, this, &MainWindow::onGamepadChassisClicked);
     connect(ui->gamepad_manipulator_button, &QPushButton::clicked, this, &MainWindow::onGamepadManipulatorClicked);
     connect(ui->gamepad_none_button, &QPushButton::clicked, this, &MainWindow::onGamepadNoneClicked);
+
+    connect(ui->connect_button, &QPushButton::clicked, this, &MainWindow::onConnectClicked);
+
     connect(chassis_node, &ChassisControlNode::gamepadStatus, gamepad_chassis_diode, [gamepad_chassis_diode](bool status){
         if (status) {gamepad_chassis_diode->enable();} else {gamepad_chassis_diode->disable();}
     } );
@@ -429,4 +432,15 @@ void MainWindow::onGamepadNoneClicked() {
     manipulator_node->disableGamepad();
 }
 
+void MainWindow::onConnectClicked() {
+    QString ip = ui->ip_input->text();
+    bool port_ok;
+    int port = ui->port_input->text().toInt(&port_ok);
+
+    if (!ip.isEmpty() && port_ok && port > 0) {
+        chassis_node->updateConnectionParams(ip, port);
+    } else {
+        QMessageBox::warning(this, "Invalid Input", "Please enter a valid IP address and port number.");
+    }
+}
 

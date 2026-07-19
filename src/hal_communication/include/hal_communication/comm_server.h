@@ -69,9 +69,11 @@ class TCPClient : public IHandler {
   std::optional<std::string> initConnection_();
   
   public:
+  void setParams(const TCPParams& params) { serverParams_ = params; }
   TCPClient() {}
   TCPClient(const TCPParams &serverParams);
   ~TCPClient();
+  
   
   int sockFd_ = -1;
   /**
@@ -117,6 +119,8 @@ class BTClient : public IHandler {
 /** ROS server class that handles [ROS <-> rover] communication */
 class CommunicationServer : public rclcpp::Node {
  private:
+  rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr param_cb_handle_;
+  rcl_interfaces::msg::SetParametersResult on_param_change(const std::vector<rclcpp::Parameter> &params);
   rclcpp::Service<hal_interfaces::srv::Communication>::SharedPtr server_;
   rclcpp::Publisher<hal_interfaces::msg::Transmission>::SharedPtr transmitter_;
   /** Handler of TCP connection  */
