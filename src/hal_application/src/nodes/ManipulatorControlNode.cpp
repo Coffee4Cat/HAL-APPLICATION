@@ -52,7 +52,7 @@ void ManipulatorControlNode::run() {
     inverse_kinematics_client = node->create_client<hal_interfaces::srv::InverseKinematics>("/inverse_kinematics");
     forward_kinematics_client = node->create_client<hal_interfaces::srv::ForwardKinematics>("/forward_kinematics");
     publish_timer = node->create_wall_timer(
-        std::chrono::milliseconds(150),
+        std::chrono::milliseconds(100),
         [this]() {
             if (active.load()) {
                 joint_state_publisher->publish(current_joint_state);

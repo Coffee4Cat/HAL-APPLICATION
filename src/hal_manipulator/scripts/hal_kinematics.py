@@ -110,7 +110,7 @@ class HalKinematics(Node):
                 #D5
                 resp.joints.position[4] = resp.joints.position[4] + 0.02 - 0.07
                 #D6
-                resp.joints.position[5] = resp.joints.position[5] + 0.074   #calibrated
+                resp.joints.position[5] = resp.joints.position[5] % (2 * np.pi)
                 resp.joints.name = ['dof1','dof2','dof3','dof4','dof5','dof6']
                 self._joint_state_memory = resp.joints.position
                 resp.success = True
