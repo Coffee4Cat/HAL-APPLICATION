@@ -38,6 +38,7 @@ private:
     bool mode45 = false;
     std::shared_ptr<rclcpp::Client<hal_interfaces::srv::InverseKinematics>> inverse_kinematics_client;
     std::shared_ptr<rclcpp::Client<hal_interfaces::srv::ForwardKinematics>> forward_kinematics_client;
+    std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::Pose>> pose_publisher;
     std::vector<double> safe_translation = {0.7, 0.0, 1.0}; // X Y Z
     std::vector<double> safe_orientation = {0.707, 0.0, 0.707, 0.0}; // W X Y Z
     void futureCallbackKinematics(rclcpp::Client<hal_interfaces::srv::InverseKinematics>::SharedFuture future);

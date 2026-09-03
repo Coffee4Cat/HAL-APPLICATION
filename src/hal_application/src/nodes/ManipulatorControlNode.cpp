@@ -48,6 +48,7 @@ void ManipulatorControlNode::run() {
 
 
     joint_state_publisher = node->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
+    pose_publisher = node->create_publisher<geometry_msgs::msg::Pose>("/manipulator_control_node/pose", 10);
     gripper_publisher = node->create_publisher<example_interfaces::msg::String>("/gripper", 10);
     inverse_kinematics_client = node->create_client<hal_interfaces::srv::InverseKinematics>("/inverse_kinematics");
     forward_kinematics_client = node->create_client<hal_interfaces::srv::ForwardKinematics>("/forward_kinematics");
@@ -56,6 +57,15 @@ void ManipulatorControlNode::run() {
         [this]() {
             if (active.load()) {
                 joint_state_publisher->publish(current_joint_state);
+                auto pose = geometry_msgs::msg::Pose();
+                pose.position.x = translation[0];
+                pose.position.y = translation[1];
+                pose.position.z = translation[2];
+                pose.orientation.w = orientation[0];
+                pose.orientation.x = orientation[1];    
+                pose.orientation.y = orientation[2];
+                pose.orientation.z = orientation[3];
+                pose_publisher->publish(pose);
                 emit telemetry(this->translation[0],this->translation[1],this->translation[2],
                     this->orientation[0],this->orientation[1],this->orientation[2],this->orientation[3]);
             }
