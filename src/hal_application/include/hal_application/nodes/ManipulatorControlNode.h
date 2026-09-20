@@ -9,6 +9,7 @@
 #include <example_interfaces/msg/string.hpp>
 #include "hal_interfaces/srv/forward_kinematics.hpp"
 #include "hal_interfaces/srv/inverse_kinematics.hpp"
+#include "hal_interfaces/srv/maintenance_pose_by_index.hpp"
 #include "hal_interfaces/msg/gamepad_interface.hpp"
 #include "nodes/ApplicationNode.h"
 #include "example_interfaces/msg/bool.hpp"
@@ -38,6 +39,7 @@ private:
     bool mode45 = false;
     std::shared_ptr<rclcpp::Client<hal_interfaces::srv::InverseKinematics>> inverse_kinematics_client;
     std::shared_ptr<rclcpp::Client<hal_interfaces::srv::ForwardKinematics>> forward_kinematics_client;
+    std::shared_ptr<rclcpp::Client<hal_interfaces::srv::MaintenancePoseByIndex>> maintenance_pose_client;
     std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::Pose>> pose_publisher;
     std::vector<double> safe_translation = {0.7, 0.0, 1.0}; // X Y Z
     std::vector<double> safe_orientation = {0.707, 0.0, 0.707, 0.0}; // W X Y Z

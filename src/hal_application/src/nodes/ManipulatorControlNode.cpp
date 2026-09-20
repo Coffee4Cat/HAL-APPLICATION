@@ -52,6 +52,7 @@ void ManipulatorControlNode::run() {
     gripper_publisher = node->create_publisher<example_interfaces::msg::String>("/gripper", 10);
     inverse_kinematics_client = node->create_client<hal_interfaces::srv::InverseKinematics>("/inverse_kinematics");
     forward_kinematics_client = node->create_client<hal_interfaces::srv::ForwardKinematics>("/forward_kinematics");
+    maintenance_pose_client = node->create_client<hal_interfaces::srv::MaintenancePoseByIndex>("/maintenance_panel_controller/maintenance_pose_by_index");
     publish_timer = node->create_wall_timer(
         std::chrono::milliseconds(100),
         [this]() {
