@@ -42,14 +42,14 @@ def generate_launch_description():
         ),
 
         # Wheel interface node (Python)
-        Node(
-            package='hal_communication',
-            executable='wheel_interface.py',
-            name='wheel_interface',
-            # namespace="hal",
-            output='screen',
-            condition=IfCondition(LaunchConfiguration("wheels"))
-        ),
+        # Node(
+        #     package='hal_communication',
+        #     executable='wheel_interface.py',
+        #     name='wheel_interface',
+        #     # namespace="hal",
+        #     output='screen',
+        #     condition=IfCondition(LaunchConfiguration("wheels"))
+        # ),
 
         # Wheel mux node
         Node(

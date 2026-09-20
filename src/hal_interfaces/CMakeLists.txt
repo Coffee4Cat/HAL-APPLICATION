@@ -26,6 +26,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/ForwardKinematics.srv"
   "msg/GroundObjectPose.msg"
   "srv/PoseGNSS.srv"
+  "srv/MaintenancePoseByIndex.srv"
   DEPENDENCIES std_msgs geometry_msgs sensor_msgs
 )
 

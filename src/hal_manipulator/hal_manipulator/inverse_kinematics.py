@@ -177,9 +177,14 @@ class InverseKinematics:
                 # remap_theta = self.wrap_to_pi(
                 #     solution[i] - self._dh_params[f"d_theta{i+1}"]
                 # )
-                remap_theta = self.wrap_to_pi_ranged(
-                    solution[i], i
-                )
+
+                remap_theta = 0.0
+                if i == 5:
+                    remap_theta = solution[i]
+                else:
+                    remap_theta = self.wrap_to_pi_ranged(
+                        solution[i], i
+                    )
 
                 if (
                     remap_theta >= self._joint_limits[i][0]
