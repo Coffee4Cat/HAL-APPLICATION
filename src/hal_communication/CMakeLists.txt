@@ -77,13 +77,6 @@
 #   src/comm_server.cpp
 # )
 
-# # Link the executable with the required libraries
-# ament_target_dependencies(${PROJECT_NAME}_node
-#   rclcpp
-#   std_msgs
-#   hal_interfaces  # Add the necessary ROS 2 dependencies
-# )
-
 # # Install the executables
 # install(TARGETS
 #   ${PROJECT_NAME}_node
@@ -107,7 +100,8 @@ find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(example_interfaces REQUIRED)
-find_package(hal_interfaces REQUIRED)  # Assuming you have hal_interfaces package
+find_package(hal_interfaces REQUIRED)
+find_package(rcl_interfaces REQUIRED)
 
 # Include directories for header files
 include_directories(
@@ -120,37 +114,36 @@ add_executable(${PROJECT_NAME}_node
   src/comm_server.cpp
 )
 
-# Link the executable with the required libraries
-ament_target_dependencies(${PROJECT_NAME}_node
-  rclcpp
-  std_msgs
-  sensor_msgs
-  hal_interfaces  # Add the necessary ROS 2 dependencies
+# Link the executable with modern targets
+target_link_libraries(${PROJECT_NAME}_node PUBLIC
+  rclcpp::rclcpp
+  std_msgs::std_msgs
+  sensor_msgs::sensor_msgs
+  ${hal_interfaces_TARGETS}
 )
 
 add_executable(wheel_mux_node
   src/wheel_mux.cpp
 )
-ament_target_dependencies(wheel_mux_node
-  rclcpp
-  std_msgs
-  sensor_msgs
-  rcl_interfaces
+
+target_link_libraries(wheel_mux_node PUBLIC
+  rclcpp::rclcpp
+  std_msgs::std_msgs
+  sensor_msgs::sensor_msgs
+  rcl_interfaces::rcl_interfaces
 )
 
 # Install the executables
 install(TARGETS
-  ${PROJECT_NAME}_node wheel_mux_node
+  ${PROJECT_NAME}_node
+  wheel_mux_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
-
 # Install Python modules
-
 ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
-
 install(PROGRAMS
   scripts/wheel_interface.py
   scripts/manipulator_interface.py
@@ -159,16 +152,12 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-
-# Install dirs.
-
+# Install dirs
 install(DIRECTORY
   launch
   config
   DESTINATION share/${PROJECT_NAME}/
 )
-
-
 
 # Register the package with ament
 ament_package()

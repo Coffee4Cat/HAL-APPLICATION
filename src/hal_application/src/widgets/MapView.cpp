@@ -192,7 +192,7 @@ void MapView::mouseReleaseEvent(QMouseEvent* event) {
     QGraphicsView::mouseReleaseEvent(event);
 }
 
-void MapView::enterEvent(QEvent* event) {
+void MapView::enterEvent(QEnterEvent* event) {
     cursor_cord->show();
     QGraphicsView::enterEvent(event);
 }
